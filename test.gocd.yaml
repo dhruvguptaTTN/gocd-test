@@ -1,9 +1,9 @@
 format_version: 1
 pipelines:
-  ananya:
-    group: test
+  dhruv:
+    group: test-gocd
     label_template: ${COUNT}
-    template: test
+    template: test-gocd
     materials:
       repo:
         git: git@github.com:dhruvguptaTTN/test-gocd.git
