@@ -1,16 +1,13 @@
 format_version: 1
+
 pipelines:
   dhruv:
     group: test-gocd
     label_template: ${COUNT}
-    template: test-gocd
     materials:
       repo:
         git: git@github.com:dhruvguptaTTN/test-gocd.git
         branch: main
-      command: "bash"
-templates:
-  test-gocd:
     stages:
       - BuildStage:
           jobs:
@@ -23,4 +20,3 @@ templates:
                         - test.sh
                   - exec:
                       command: ./test.sh
- 
