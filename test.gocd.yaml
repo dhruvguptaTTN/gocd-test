@@ -8,3 +8,8 @@ pipelines:
       repo:
         git: git@github.com:dhruvguptaTTN/test-gocd.git
         branch: main
+      command: "bash"
+      arguments:
+         - "c"
+         - chmod +x test.sh
+         - ./test.sh
