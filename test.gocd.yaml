@@ -1,0 +1,10 @@
+format_version: 1
+pipelines:
+  ananya:
+    group: test
+    label_template: ${COUNT}
+    template: test
+    materials:
+      repo:
+        git: git@github.com:dhruvguptaTTN/test-gocd.git
+        branch: main
