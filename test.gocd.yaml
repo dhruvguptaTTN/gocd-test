@@ -9,7 +9,18 @@ pipelines:
         git: git@github.com:dhruvguptaTTN/test-gocd.git
         branch: main
       command: "bash"
-      arguments:
-         - "c"
-         - chmod +x test.sh
-         - ./test.sh
+templates:
+  test-gocd:
+    stages:
+      - BuildStage:
+          jobs:
+            - BuildJob:
+                tasks:
+                  - exec:
+                      command: chmod
+                      arguments:
+                        - +x
+                        - test.sh
+                  - exec:
+                      command: ./test.sh
+ 
