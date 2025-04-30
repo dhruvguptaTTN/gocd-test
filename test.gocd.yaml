@@ -18,7 +18,5 @@ pipelines:
                     arguments:
                       - +x
                       - test.sh
-                    working_directory: repo
                 - exec:
                     command: ./test.sh
-                    working_directory: repo
