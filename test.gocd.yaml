@@ -11,12 +11,12 @@ pipelines:
     stages:
       - BuildStage:
           jobs:
-            - BuildJob:
-                tasks:
-                  - exec:
-                      command: chmod
-                      arguments:
-                        - +x
-                        - test.sh
-                  - exec:
-                      command: ./test.sh
+            BuildJob:
+              tasks:
+                - exec:
+                    command: chmod
+                    arguments:
+                      - +x
+                      - test.sh
+                - exec:
+                    command: ./test.sh
